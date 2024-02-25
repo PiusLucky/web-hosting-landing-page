@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { X } from "lucide-react";
+import { Phone, X } from "lucide-react";
 import Link from "next/link";
+import { Separator } from "@/components/ui/separator";
 
 function NavBar() {
   const [menu, setMenu] = useState(false);
@@ -16,23 +17,45 @@ function NavBar() {
       <div className=" hidden lg:block animate-in fade-in zoom-in bg-white p-4">
         <div className="flex justify-between mx-[41px] items-center">
           <div>
-            <img src="/svgs/sf_logo.svg" alt="logo" />
+            <img src="/images/logo.png" alt="logo" />
           </div>
           <div className="flex gap-[20px] xl:gap-[50px] text-[16px] items-center select-none">
             <p
               className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
             >
-              Link1
+              Our Services
             </p>
-            {/* Add more links here */}
+            <p
+              className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+            >
+              About
+            </p>
+            <p
+              className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+            >
+              Blog
+            </p>
+            <p
+              className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+            >
+              Contact
+            </p>
           </div>
           <div className="flex items-center gap-[40px] select-none">
-            <Link
-              href="/auth/login"
-              className="hover:text-primary cursor-pointer flex items-center gap-2 "
+            <p
+              className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
             >
-              Sign in
-            </Link>
+              Account
+            </p>
+            <div className="h-6">
+              <Separator orientation="vertical" />
+            </div>
+
+            <div
+              className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+            >
+              <Phone color="#FF5D5D" /> +2349067322844
+            </div>
           </div>
         </div>
       </div>
@@ -44,7 +67,7 @@ function NavBar() {
       >
         <div className="flex justify-between mx-[10px]">
           <div className="flex gap-[50px] text-[16px] items-center select-none">
-            <img src="/svgs/sf_logo.svg" alt="logo" className="w-[7rem]" />
+            <img src="/images/logo.png" alt="logo" className="w-[4rem]" />
           </div>
           <div className="flex items-center gap-[40px]">
             {menu ? (
@@ -65,15 +88,42 @@ function NavBar() {
         {menu ? (
           <div className="my-8 select-none animate-in slide-in-from-right">
             <div className="flex flex-col gap-8 mt-8 mx-4">
-              <p className="text-black cursor-pointer">
-                <span>How it works</span>
+              <p
+                className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+              >
+                Our Services
               </p>
-              {/* Add more links here */}
+              <p
+                className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+              >
+                About
+              </p>
+              <p
+                className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+              >
+                Blog
+              </p>
+              <p
+                className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+              >
+                Contact
+              </p>
 
               <div className="flex flex-col gap-[40px] select-none">
-                <Link href="/auth/login" className="text-black cursor-pointer">
-                  Signin
-                </Link>
+                <p
+                  className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+                >
+                  Account
+                </p>
+                <div className="h-6 hidden lg:block">
+                  <Separator orientation="vertical" />
+                </div>
+
+                <div
+                  className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+                >
+                  <Phone color="#FF5D5D" /> +2349067322844
+                </div>
               </div>
             </div>
           </div>
