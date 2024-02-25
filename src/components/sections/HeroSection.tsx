@@ -31,7 +31,7 @@ function HeroSection() {
           Blazing fast web hosting for individuals and businesses of all sizes
           backed by 24x7x365 Support.
         </p>
-        <div className="flex gap-6 mt-16">
+        <div className="flex gap-6 mt-16 flex-col md:flex-row">
           <MainButton text="Create an Account" classes="gradient w-[180px]" />
           <MainButton
             text="Choose your plan"

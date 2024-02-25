@@ -45,12 +45,12 @@ function SubscriptionSection() {
       </div>
 
       <div className="flex justify-center mt-8">
-        <Tabs defaultValue="basic" className="w-[400px]">
+        <Tabs defaultValue="basic" className="md:w-[400px]">
           <TabsList>
-            <TabsTrigger value="basic" className="font-bold w-[200px]">
+            <TabsTrigger value="basic" className="font-bold md:w-[200px]">
               Basic
             </TabsTrigger>
-            <TabsTrigger value="premium" className="font-bold w-[200px]">
+            <TabsTrigger value="premium" className="font-bold md:w-[200px]">
               Premium
             </TabsTrigger>
           </TabsList>
